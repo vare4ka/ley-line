@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tech task for frontend developer position
 
-## Getting Started
+## Setup
 
-First, run the development server:
+Install the dependencies, then run the server in development mode:
 
-```bash
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comments
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+As I'm a Frontend engineer, I haven't implemented backend side or communication with database. I mocked the API requests instead.
 
-## Learn More
+Of course, in ideal world this app should run on Web Sockets and some green notification popups in the bottom corner about the updates.
+I just made two UI views - one for Party A and the second for Party B.
 
-To learn more about Next.js, take a look at the following resources:
+Also we could use "redux-persist" for syncronizing browser tabs, but it would take much longer time then estimated for test task.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I have chosen Redux Toolkit for state management as it's convenient, modern and laconic tool.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I haven't paid much attention to design and mobile markup here, but if colaborating with designer we could achieve quite a stylish application :)
+Also there is no API errors handling because API is mocked, but I'll leave comments where they could be in real situation.
 
-## Deploy on Vercel
+Ideally instead of number inputs there should be small non-editable inputs with "+" and "-", like increment counters. Also I just noticed that Party B can only raise, so for him there would be just "+" button.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+And the last - in real app we should create a components library for buttons, inputs etc.

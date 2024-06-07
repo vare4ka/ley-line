@@ -44,8 +44,6 @@ export default function PartyA() {
     setSettlementAmount(storedAmount);
   }, [storedAmount])
 
-  console.log(storedAmount, proposedAmountB, isAgreed)
-
   if(isStoreSynced && isAgreed) {
     return <Settled />;
   }
